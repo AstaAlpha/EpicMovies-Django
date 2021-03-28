@@ -2,11 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from airtable import Airtable
 import os
-from decouple import config
 
-AT = Airtable(config('AIRTABLE_MOVIESTABLE_BASE_ID'),
+AT = Airtable(os.environ.get('AIRTABLE_MOVIESTABLE_BASE_ID'),
               'Movies',
-              api_key=config('AIRTABLE_API_KEY'))
+              api_key=os.environ.get('AIRTABLE_API_KEY'))
 
 def home_page(request):
     user_query = str(request.GET.get('query', ''))
