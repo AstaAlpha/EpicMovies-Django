@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-from decouple import config
 
 
-AIRTABLE_API_KEY = config('AIRTABLE_API_KEY')
-AIRTABLE_MOVIESTABLE_BASE_ID = config('AIRTABLE_MOVIESTABLE_BASE_ID')
+AIRTABLE_API_KEY = os.envion.get('AIRTABLE_API_KEY')
+AIRTABLE_MOVIESTABLE_BASE_ID = os.environ.get('AIRTABLE_MOVIESTABLE_BASE_ID')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
