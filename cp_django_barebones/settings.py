@@ -11,9 +11,16 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from decouple import config
+
+
+AIRTABLE_API_KEY = config('AIRTABLE_API_KEY')
+AIRTABLE_MOVIESTABLE_BASE_ID = config('AIRTABLE_MOVIESTABLE_BASE_ID')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,7 +61,8 @@ ROOT_URLCONF = 'cp_django_barebones.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND':
+        'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {

@@ -1,5 +1,7 @@
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Anton');
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 
 * {
     box-sizing: border-box;
@@ -153,6 +155,17 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
 }
+.star{
+    z-index: 9998;
+    color: #FAAA2B;
+    top: 20%;
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    background: transparent url("https://www.freepnglogos.com/uploads/star-png/star-vector-png-transparent-image-pngpix-21.png") no-repeat 0 0;
+    transform: translateX(-50%);
+}
+
 
 .movies__item-delete-button {
     z-index: 9998;
@@ -258,4 +271,8 @@ body::before {
     .movies__item {
         width: 100%;
     }
+    
+}
+.movies__item.full-width{
+    width: 100%;
 }
